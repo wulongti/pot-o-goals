@@ -1,0 +1,32 @@
+//this is the primary css file for the project
+@import 'fonts';
+
+html {
+    font-size: 10px;
+    background: rgb(135,224,253);
+    background: linear-gradient(135deg,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: $bodyCopy;
+    background: radial-gradient(ellipse at center,  rgba(214,50,255,0) 29%,rgba(214,50,255,0.2) 30%,rgba(214,50,255,0.2) 35%,rgba(110,0,255,0.2) 40%,rgba(0,55,255,0.2) 45%,rgba(59,255,0,0.2) 50%,rgba(255,246,0,0.2) 55%,rgba(252,138,0,0.2) 60%,rgba(255,0,0,0.2) 65%,rgba(255,0,0,0.2) 70%,rgba(255,0,0,0) 71%);
+    background-position: right top;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+#root {
+    min-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'footer';
+    grid-template-rows: 10rem auto 4rem;
+}
+
+button {
+    cursor: pointer;
+}

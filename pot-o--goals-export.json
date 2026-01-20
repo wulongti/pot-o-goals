@@ -1,0 +1,123 @@
+{
+  "chat" : [ {
+    "color" : "dodgerblue",
+    "date" : "9/13/2020, 10:17:33 PM",
+    "mssg" : "First!",
+    "name" : "Xian",
+    "photo" : "https://lh3.googleusercontent.com/a-/AOh14GhZ4Zmqnw-AR9cqzH1_qUOdAq6ABMtIrmQXUgB_gw"
+  }, {
+    "color" : "purple",
+    "date" : "9/13/2020, 11:07:33 PM",
+    "mssg" : "Ho ho! tryin' the chat!",
+    "name" : "repulsive-sparkling-tomatoes",
+    "photo" : "https://lh3.googleusercontent.com/a-/AOh14GiFKQ48Um4jq6tvzQuca2dB1cI5W9dPOnsanA7_"
+  }, {
+    "color" : "red",
+    "date" : "9/13/2020, 11:09:14 PM",
+    "mssg" : "it works! it totally works!",
+    "name" : "handsome-itchy-oases",
+    "photo" : "https://lh3.googleusercontent.com/a-/AOh14Gg4UBd_3hBKuVmwLJoTEVeecCaQZZ2FL-J5sNkX"
+  }, {
+    "color" : "dodgerblue",
+    "date" : "9/13/2020, 11:25:02 PM",
+    "mssg" : "Welcome to the Pot o' Goals App!",
+    "name" : "Xian",
+    "photo" : "https://lh3.googleusercontent.com/a-/AOh14GhZ4Zmqnw-AR9cqzH1_qUOdAq6ABMtIrmQXUgB_gw"
+  } ],
+  "dbSq4zIEzofj3IksoW4lfNuSIhq2" : {
+    "goals" : [ {
+      "check" : false,
+      "name" : "asdf"
+    } ],
+    "info" : {
+      "coins" : 2,
+      "color" : "red",
+      "email" : "christian.p.brock@gmail.com",
+      "last" : "9/14/2020",
+      "name" : "handsome-itchy-oases",
+      "note" : false,
+      "photo" : "https://lh3.googleusercontent.com/a-/AOh14Gg4UBd_3hBKuVmwLJoTEVeecCaQZZ2FL-J5sNkX",
+      "tickets" : 4,
+      "uid" : "dbSq4zIEzofj3IksoW4lfNuSIhq2"
+    }
+  },
+  "k7wLBqqeG4Ztm80hNFXwWjY5t7h2" : {
+    "goals" : {
+      "0" : {
+        "check" : false,
+        "name" : "My first goal"
+      },
+      "1600041959769" : {
+        "check" : false,
+        "name" : "toy 1"
+      },
+      "1600041962612" : {
+        "check" : false,
+        "name" : "toy 2"
+      }
+    },
+    "info" : {
+      "coins" : 1,
+      "color" : "purple",
+      "email" : "wulongtoys@gmail.com",
+      "last" : "9/14/2020",
+      "name" : "WuLongToys",
+      "note" : true,
+      "photo" : "https://lh3.googleusercontent.com/a-/AOh14GiFKQ48Um4jq6tvzQuca2dB1cI5W9dPOnsanA7_",
+      "tickets" : 0,
+      "uid" : "k7wLBqqeG4Ztm80hNFXwWjY5t7h2"
+    }
+  },
+  "leaderBoard" : {
+    "dbSq4zIEzofj3IksoW4lfNuSIhq2" : {
+      "coins" : 2,
+      "name" : "handsome-itchy-oases",
+      "rating" : 53.333333333333336,
+      "tickets" : 4
+    },
+    "k7wLBqqeG4Ztm80hNFXwWjY5t7h2" : {
+      "coins" : 1,
+      "name" : "WuLongToys",
+      "rating" : 0,
+      "tickets" : 0
+    },
+    "pVWbB4beXkdokaTlmn7ZPLTIVrj2" : {
+      "coins" : 1,
+      "name" : "Xian",
+      "rating" : 16.666666666666668,
+      "tickets" : 1
+    }
+  },
+  "luckyPot" : {
+    "challengeDate" : "12/31/2020",
+    "totalCoins" : 6,
+    "totalTickets" : 5
+  },
+  "pVWbB4beXkdokaTlmn7ZPLTIVrj2" : {
+    "goals" : {
+      "1600052053246" : {
+        "check" : false,
+        "name" : "at least 30 mins of dev work"
+      },
+      "1600052073715" : {
+        "check" : false,
+        "name" : "write 500 words for my book"
+      },
+      "1600052081998" : {
+        "check" : false,
+        "name" : "reach step goals"
+      }
+    },
+    "info" : {
+      "coins" : 1,
+      "color" : "dodgerblue",
+      "email" : "wulongti@gmail.com",
+      "last" : "9/14/2020",
+      "name" : "Xian",
+      "note" : false,
+      "photo" : "https://lh3.googleusercontent.com/a-/AOh14GhZ4Zmqnw-AR9cqzH1_qUOdAq6ABMtIrmQXUgB_gw",
+      "tickets" : 1,
+      "uid" : "pVWbB4beXkdokaTlmn7ZPLTIVrj2"
+    }
+  }
+}

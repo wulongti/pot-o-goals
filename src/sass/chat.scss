@@ -1,0 +1,113 @@
+//chat styles
+@import 'fonts';
+
+.chat {
+    grid-area: chat;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    background: rgba(211, 211, 211, 0.5);
+    padding: 1rem;
+    margin: 1rem 0 0 1rem;
+
+    @media screen and (max-width: 750px) {
+        margin: 0 0.5rem;
+    }
+
+    &__headline {
+        font-family: $headline;
+        margin: 0;
+        letter-spacing: 0.1rem;
+        font-size: 2rem;
+        color: lightgreen;
+        text-shadow: 1px 1px 0 seagreen, -1px 1px 0 seagreen, 1px -1px 0 seagreen, -1px -1px 0 seagreen;
+        border-bottom: 2px solid gray;
+        margin-bottom: 1rem;
+    }
+
+    &__window {
+        max-width: 100%;
+        background: rgba(0,0,0,0.25);
+        border: 2px solid #666;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        max-height: 24rem;
+        overflow: auto;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 1rem;
+
+        &-input {
+            margin-right: 0.5rem;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+
+            &::placeholder {
+                color: lightgray;
+            }
+        }
+
+        &-submit {
+            background: limegreen;
+            border: 1px solid seagreen;
+            color: white;
+            text-shadow: 1px 1px 0 seagreen, -1px 1px 0 seagreen, 1px -1px 0 seagreen, -1px -1px 0 seagreen;
+            border-radius: 0.5rem;
+            padding: 0 1rem;
+        }
+    }
+
+    &__mssg {
+        display: grid;
+        grid-template-areas: 'photo block';
+        grid-template-columns: auto 1fr;
+        margin-bottom: 1rem;
+
+        &.self {
+            grid-template-areas: 'block photo';
+            grid-template-columns: 1fr auto;
+        }
+
+        &-photo {
+            grid-area: photo;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            width: 7rem;
+            height: 7rem;
+            margin-right: 1rem;
+
+            .self & {
+                margin-right: 0;
+                margin-left: 1rem;
+            }
+        }
+
+        &-block {
+            grid-area: block;
+            color: white;
+            text-shadow: 0 0 0.3rem black;
+            font-size: 1.3rem;
+            padding: 1rem;
+            border-radius: 3rem;
+        }
+
+       &-name {
+            text-align: center;
+            font-weight: 700;
+            opacity: 0.75;
+        }
+
+       &-date {
+            opacity: 0.5;
+        }
+
+       &-text {
+            font-size: 1.8rem;
+        }
+    }
+}

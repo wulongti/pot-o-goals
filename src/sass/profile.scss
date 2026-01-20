@@ -1,0 +1,181 @@
+//profile style sheet
+@import 'fonts';
+
+.profile {
+    display: grid;
+    grid-template-areas:
+        'user goals'
+        'challenge goals'
+        'challenge chat';
+    grid-template-columns: 40% 60%;
+    // grid-template-rows: 21.5rem auto auto;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto 2rem;
+
+    @media screen and (max-width: 750px) {
+        grid-template-areas:
+        'user'
+        'goals'
+        'challenge'
+        'chat';
+        grid-template-columns: auto;
+    }
+
+    &__user {
+        grid-area: user;
+        border: 2px solid gray;
+        border-radius: 0.5rem;
+        background: rgba(211, 211, 211, 0.5);
+        padding: 1rem;
+        // height: 19rem;
+        display: grid;
+        grid-template-areas:
+            'headline headline'
+            'photo tickets'
+            'photo coins'
+            'photo logout'
+            'challenge challenge';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4rem 5rem 5rem 5rem;
+
+        @media screen and (max-width: 750px) {
+            grid-template-columns: 42% auto;
+            margin: 0 0.5rem 1rem;
+        }
+    }
+
+    &__headline {
+        grid-area: headline;
+        font-family: $headline;
+        text-align: center;
+        margin: 0;
+        background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, #1e5799 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#1e5799',GradientType=0 );
+        color: white;
+        padding: 0.5rem;
+        letter-spacing: 0.1rem;
+        text-shadow: 0 0 0.2rem blue;
+        border-radius: 0.5rem 0.5rem 0 0;
+        border: 2px solid aliceblue;
+        border-bottom: none;
+        transition: height 0.3s;
+
+        &-edit {
+            background: none;
+            border: none;
+        }
+
+        &-editText {
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        &-text {
+            display: block;
+            margin: 0;
+
+            .true & {
+                display: none;
+            }
+        }
+        &-form {
+            display: none;
+
+            .true & {
+                display: block;
+            }
+        }
+    }
+
+    &__photo {
+        grid-area: photo;
+        max-width: 100%;
+        max-height: 100%;
+        box-sizing: border-box;
+        border: 2px solid aliceblue;
+        border-radius: 0 0 0.5rem 0.5rem;
+        border-top-width: 1px;
+        margin-top: 0.3rem;
+    }
+
+    &__stat {
+        margin: 0.3rem;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
+        font-size: 2rem;
+        display: flex;
+
+        &--tickets {
+            grid-area: tickets;
+        }
+
+        &--coins {
+            grid-area: coins;
+        }
+    }
+
+    &__button {
+        grid-area: logout;
+        font-family: $headline;
+        letter-spacing: 0.1rem;
+        width: calc(100% - 0.6rem);
+        border: 1px solid #666;
+        border-radius: 0.3rem;
+        background: #aaa;
+        color: white;
+        font-weight: 700;
+        text-shadow: 1px 1px 0 #666, -1px 1px 0 #666, 1px -1px 0 #666, -1px -1px 0 #666;
+        padding: 0.5rem;
+        transition: background-color 0.3s;
+        margin: 0.3rem;
+
+        &:hover {
+            background: white;
+        }
+    }
+
+    &__challenges {
+        grid-area: challenge;
+
+       &-headline {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 0.5rem;
+        }
+
+        &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: auto auto;
+
+            &Button {
+                border: none;
+                background: aliceblue;
+                color: royalblue;
+                /* font-size: 1.6rem; */
+                font-weight: bold;
+                border-radius: 0.3rem;
+                padding: 0.3rem 0.5rem;
+                margin: 0.3rem auto;
+                width: 90%;
+                display: block;
+                transition: all 0.3s;
+
+                &:hover {
+                    color:aliceblue;
+                    background: royalblue;
+                }
+            }
+
+            &Totals {
+                text-align: center;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

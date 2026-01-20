@@ -1,0 +1,52 @@
+//styles for the header
+@import 'fonts';
+
+.header {
+    grid-area: header;
+
+    &__h1 {
+        font-family: $titleText;
+        text-align: center;
+        font-size: 7rem;
+        margin: 1rem auto;
+        color: gold;
+        text-shadow: 2px 2px 0 saddlebrown, -2px 2px 0 saddlebrown, 2px -2px 0 saddlebrown, -2px -2px 0 saddlebrown;
+        background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%,rgba(244,225,90,0) 64%,rgba(241,218,54,0) 100%);
+
+        @media screen and (max-width: 750px) {
+            font-size: 5rem;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        text-indent: 110%;
+        height: 8rem;
+        background-image: url("/pog_icon.png");
+        background-size: contain;
+        background-position: left center;
+        background-repeat: no-repeat;
+        width: 9rem;
+        margin-bottom: -1.5rem;
+
+        @media screen and (max-width: 750px){
+            width: 5rem;
+            height: 6rem;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "'";
+            top: -1rem;
+            right: 2.5rem;
+
+            @media screen and (max-width:750px) {
+                top: 0rem;
+                right: 1.6rem;
+            }
+        }
+    }
+}

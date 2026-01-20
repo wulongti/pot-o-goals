@@ -1,0 +1,130 @@
+//the challenge styles
+@import 'fonts';
+
+.challenge {
+    grid-area: challenge;
+    margin-top: 1rem;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    background: rgba(211, 211, 211, 0.5);
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: 'headline headline'
+        'stats leaders'
+        'date date'
+        'leaderboard leaderboard';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem auto 5rem 1fr;
+
+    @media screen and (max-width: 750px) {
+        margin: 0 0.5rem 1rem;
+    }
+
+    &__heading {
+        grid-area: headline;
+        font-family: $headline;
+        text-align: center;
+        margin: 0;
+        background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, #1e5799 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#1e5799',GradientType=0 );
+        color: white;
+        padding: 0.5rem;
+        letter-spacing: 0.1rem;
+        text-shadow: 0 0 0.2rem blue;
+        border-radius: 0.5rem 0.5rem 0 0.5rem;
+        border: 2px solid aliceblue;
+        border-bottom: none;
+        transition: height 0.3s;
+    }
+
+    &__totals {
+        background-image: url("/pog2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+        height: 9rem;
+        padding-top: 5rem;
+    }
+
+    &__total {
+        font-family: $headline;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 0 0 0.5rem rgba(0,0,0,0.5);
+        text-align: center;
+    }
+
+    &__leader {
+
+        &-board {
+            margin: 0.3rem;
+            padding: 0.5rem;
+            list-style: none;
+            background: rgba(255, 255, 255, 0.5);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    
+        &-tickets {
+            font-size: 0.8em;
+            display: block;
+            padding-left: 2rem;
+            font-weight: 400;
+        }
+    }
+
+    &__enddate {
+        grid-area: date;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        text-align: center;
+
+        &-date {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+    }
+
+    &__leaderboard {
+        grid-area: leaderboard;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        border: 1px solid lightslategray;
+        max-height: 26.5rem;
+        overflow: auto;
+
+        &-row {
+            display: grid;
+            grid-template-columns: 2.5rem auto 6rem 6rem;
+            margin: 0;
+
+            &:nth-child(odd) {
+                background: rgba(255,255,255,0.25);
+            }
+        }
+
+        &-rank {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        &-icon {
+            display: inline-block;
+            margin-right: 0.3rem;
+        }
+    }
+}
+
+[aria-label="coin icon"] {
+    background: gold;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid brown;
+    line-height: 1.6rem;
+}

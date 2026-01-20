@@ -1,0 +1,30 @@
+//footer styles
+@import 'fonts';
+
+.footer {
+    grid-area: footer;
+    color: darkgreen;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: radial-gradient(ellipse at center,  rgba(82,177,82,1) 0%,rgba(0,138,0,1) 49%,rgba(0,36,0,1) 49%,rgba(0,36,0,1) 50%,rgba(0,36,0,0) 50%);
+    background-position: 36% 29%;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    padding: 1rem;
+
+    &__link,
+    &__link:visited {
+        color: darkgreen;
+        transition: color 0.3s;
+    }
+
+    &__link:hover {
+        color: white;
+    }
+}
+
+.copyright, .version {
+    display: inline-block;
+    margin: 0 1rem;
+}

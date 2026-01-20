@@ -1,0 +1,36 @@
+//this is the login styles
+@import 'fonts';
+
+.login {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__headline {
+        font-family: $headline;
+        font-size: 3rem;
+        color: white;
+        text-shadow: 0 0 0.5rem dodgerblue;
+    }
+
+    &__button {
+        font-family: $headline;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 100%;
+        font-size: 2rem;
+        padding: 1.5rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        color: white;
+        background: green;
+
+        &.google {
+            background: #db3236;
+        }
+
+        &.facebook {
+            background: #3b5998;
+        }
+    }
+}
