@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pot-o-Goals (POG)
 
-## Available Scripts
+**Pot-o-Goals** is a gamified goal-tracking and challenge application designed to help users achieve their targets through friendly competition. Users can join "pots" (challenges), track daily goals, earn tickets/coins, and compete on leaderboards.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+-   **User Authentication**: Sign in and profile management via Firebase Auth.
+-   **Challenge Groups ("Pots")**: Join shared challenges with custom rules.
+-   **Goal Tracking**: Daily check-ins for personal goals within a challenge.
+-   **Leaderboards**: Real-time ranking based on coins and tickets earned.
+-   **Social Chat**: Built-in chat functionality for each challenge group.
+-   **Schemes**: different scoring algorithms like "All or Nothing" (aon) or "Ticket per Goal" (tpg).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack (Archives)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This project was built during a learning phase (circa 2020) and utilizes an older stack:
 
-### `npm test`
+-   **Frontend**: React 16.13 (Class Components)
+-   **Languages**: JavaScript (ES6+), Sass (SCSS)
+-   **Backend**: Firebase (Realtime Database, Authentication)
+-   **Libraries**: 
+    -   `re-base` (for binding Firebase State to React State)
+    -   `react-scroll`
+    -   `create-react-app` (Build tool)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup & Run
 
-### `npm run build`
+> **Note**: Due to the age of the dependencies (React 16, older `react-scripts`), you may need an older version of Node.js (e.g., Node 12 or 14) to install dependencies without errors.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+2.  **Start Development Server**:
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
 
-### `npm run eject`
+## Modernization Roadmap
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To bring this project up to modern standards (2025+), the following improvements are recommended:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Build Tool & Framework
+-   **Migrate to Vite**: Replace `create-react-app` with Vite for significantly faster builds and dev server performance.
+-   **Upgrade to React 18+**: Move to the latest React version to leverage concurrent features and automatic batching.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 2. Architecture & Code Quality
+-   **Functional Components & Hooks**: Refactor Class components (`Content.js`, etc.) to Functional components using Hooks (`useState`, `useEffect`).
+-   **TypeScript**: Adopt TypeScript to add type safety, especially for the complex data structures in `challenges` and `user` objects.
+-   **State Management**: Replace `re-base` with React Context, Redux Toolkit, or Zustand for more predictable state management without tight coupling to the DB library.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 3. Backend (Firebase)
+-   **Firebase Modal SDK**: partial imports (tree-shakable) from Firebase v9+. The current app uses the compat/v5 namespace style which imports the entire library.
+-   **Firestore**: Consider moving from Realtime Database to Cloud Firestore for better querying capabilities and scalability.
 
-## Learn More
+### 4. Styling
+-   **CSS Modules or Tailwind**: Move away from global Sass stylesheets to scoped CSS Modules or a utility-first framework like Tailwind CSS for better maintainability.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+*Archived by [Antigravity](https://google.com) - 2026*
